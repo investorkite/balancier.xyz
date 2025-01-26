@@ -40,7 +40,7 @@
       align-items: center;
       font-size: 12px;
       color: rgba(0, 0, 0, 0.1);
-      transition: color 0.2s ease;
+      transition: color 0.2s ease, opacity 0.2s ease;
       opacity: 0.5;
     }
     .grid span.active {
@@ -117,6 +117,14 @@
         shape.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
       });
     });
+
+    // Make numbers change values every 4 seconds
+    setInterval(() => {
+      const spans = document.querySelectorAll('.grid span');
+      const index = Math.floor(Math.random() * spans.length);
+      const span = spans[index];
+      span.textContent = (Math.random() * 1000).toFixed(2);
+    }, 10);
   </script>
 </body>
 </html>
