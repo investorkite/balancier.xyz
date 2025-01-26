@@ -47,7 +47,7 @@
       color: palevioletred;
     }
     .grid span.near {
-      color: orange;
+      color: rgba(255, 166, 0, 0.544);
     }
     .shape {
       position: absolute;
@@ -124,6 +124,12 @@
       const index = Math.floor(Math.random() * spans.length);
       const span = spans[index];
       span.textContent = (Math.random() * 1000).toFixed(2);
+
+      // Temporarily change opacity
+      span.style.opacity = "0.9";
+      setTimeout(() => {
+        span.style.opacity = "0.5";
+      }, 2000);
     }, 10);
   </script>
 </body>
