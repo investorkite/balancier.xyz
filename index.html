@@ -46,5 +46,18 @@
     <div class="shape" style="top: 60%; left: 20%;"></div>
   </div>
   <h1>Coming Soon</h1>
+  <script>
+    document.addEventListener('mousemove', (event) => {
+      const shapes = document.querySelectorAll('.shape');
+      shapes.forEach((shape) => {
+        const shapeRect = shape.getBoundingClientRect();
+        const centerX = shapeRect.left + shapeRect.width / 2;
+        const centerY = shapeRect.top + shapeRect.height / 2;
+        const deltaX = (event.clientX - centerX) * 0.05;
+        const deltaY = (event.clientY - centerY) * 0.05;
+        shape.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+      });
+    });
+  </script>
 </body>
 </html>
