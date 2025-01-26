@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: white;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: black;
+      text-align: center;
+    }
+    .background {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .shape {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-color: rgba(128, 128, 128, 0.3);
+      border-radius: 50%;
+      filter: blur(40px);
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="shape" style="top: 10%; left: 15%;"></div>
+    <div class="shape" style="top: 50%; left: 30%;"></div>
+    <div class="shape" style="top: 70%; left: 60%;"></div>
+    <div class="shape" style="top: 20%; left: 80%;"></div>
+    <div class="shape" style="top: 40%; left: 50%;"></div>
+    <div class="shape" style="top: 60%; left: 20%;"></div>
+  </div>
+  <h1>Coming Soon</h1>
+</body>
+</html>
